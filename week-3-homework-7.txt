@@ -39,3 +39,6 @@ ssh-keygen -t ed25519 -C "keskine96@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 git remote set-url origin git@github.com:Airties-Bootcamp-Patika/week-3-homework-1-wonka6.git
+
+10. adım ==> git log --oneline --decorate  alias olarak bir isim verelim
+git config --global alias.gorunum "log --oneline --decorate"
