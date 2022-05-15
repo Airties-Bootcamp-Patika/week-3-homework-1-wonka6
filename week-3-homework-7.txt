@@ -52,3 +52,53 @@ git status
 git add .
 git commit -m "Add none_track.txt file for .gitignore"
 
+
+13. adım ==> GitHub bir proje clone yapalımgit
+git clone <git_repo>
+ 
+14. adım ==> git log,git statusu sürekli kullanalım
+git log
+git status
+
+15. adım ==> Tag versiyonalamada kullanalım
+git tag v1.1
+
+16. adım ==> GitHub branch açıp , pull request yapıp kendi localimizde pull yapalım
+new_branch : bu isimde yeni bir branch olusturuldu github uzerinden
+git pull
+git checkout new_branch :
+	Already on 'new_branch'
+	Your branch is up to date with 'origin/new_branch'.
+
+
+
+
+17. adım ==> en son durumda linux fast forward merge ile git branchini no-ff merge ile yapalım
+git merge linux
+Merge made by the 'recursive' strategy.
+ linux.txt | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 linux.txt
+
+git merge --no-ff git
+CONFLICT (add/add): Merge conflict in week-3-homework-1-wonka6
+Auto-merging week-3-homework-1-wonka6
+Automatic merge failed; fix conflicts and then commit the result.
+
+Yukarida belirtilen conflict git branch inde takip edilmeyen week-3-homework-1-wonka6 directory sinden oturu olusmus.
+Ilk once git branch ine giderek commitledim daha sonra master branchinde merge islemini gerceklestirdim.
+
+git merge --no-ff git
+Merge made by the 'recursive' strategy.
+ git.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 git.txt
+
+18. adım ==> branchlerimizi listelemek ,silmek v.b branch işlemleri yapalım
+git branch list
+git branch -d <branch_name>
+
+
+
+
+
