@@ -42,3 +42,13 @@ git remote set-url origin git@github.com:Airties-Bootcamp-Patika/week-3-homework
 
 10. adım ==> git log --oneline --decorate  alias olarak bir isim verelim
 git config --global alias.gorunum "log --oneline --decorate"
+
+11. adım ==> .gitignore dosyası oluşturalım.  ve git tarafından takip edilmesini istemediğimiz secret adındaki dizini git ignore verelim
+touch none_track_file.txt
+cat >> .gittignore
+git status
+mv .gittignore .gitignore
+git status
+git add .
+git commit -m "Add none_track.txt file for .gitignore"
+
