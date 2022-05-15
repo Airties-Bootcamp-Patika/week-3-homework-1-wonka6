@@ -1,0 +1,41 @@
+1.adım ==> git unstaging staging kavramları nedir 
+Git unstaging area working area daki ve tracking edilmeyen (git add yapılmamış) alanı ifade eder.
+Git staging area da git add yapıldıktan sonra ve draft halindeki çalışmayı (daha repoya gönderilmemiş) ifade ediyor.
+
+2.adım ==> Git config ayarlarını bakalım user.name ve user.email
+
+git config --global -l :Bu komutla birlikte yapılan konfigürsayon ayarları gözükür. Çıktısı şu şekildedir:
+user.name=wonka6
+user.email=keskine96@gmail.com
+alias.harita=log --all --graph --decorate --oneline
+
+3. adım ==> git_code adında linux komutlarıyla dizin oluşturalım
+mkdir gıt_code
+
+4. adım ==> git_code dizine içinde data.txt dosyası oluşturalım 
+touch data.txt
+
+5. adım ==> git init yapalım
+git init
+
+6. adım ==> linux ve git adında 2 tane branch oluşturalım
+git branch linux
+git branch git
+
+7. adım ==> linux branchine linux.txt dosyasının içine aklıma gelen linux komutları yazar her 2-3 satır sonunda add ve commit yapalım
+gıt checkout linux
+touch linux.txt
+git add .
+git commit -m "commit message"
+
+8. adım ==> git branchine git.txt dosyasının içine aklıma gelen linux komutları yazar her 2-3 satır sonunda add ve commit yapalım
+git checkout git
+touch git.txt
+git add .
+git commit -m "commit message"
+
+9. adım ==> GitHub için SSH-key oluşturarak GitHub push yapalım
+ssh-keygen -t ed25519 -C "keskine96@gmail.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+git remote set-url origin git@github.com:Airties-Bootcamp-Patika/week-3-homework-1-wonka6.git
